@@ -149,7 +149,9 @@ QBCore.Functions.CreateCallback('qb-garages:server:canDeposit', function(source,
         cb(false)
         return
     end
-    if type == 'house' and not exports['ps-housing']:hasKey(Player.PlayerData.license, Player.PlayerData.citizenid, Config.Garages[garage].houseName) then
+    --removed for pshousing and added a new code below (only the one line)
+    --if type == 'house' and not exports['ps-housing']:hasKey(Player.PlayerData.license, Player.PlayerData.citizenid, Config.Garages[garage].houseName) then
+    if type == 'house' and not exports['ps-housing']:IsOwner(source, garage) then
         cb(false)
         return
     end

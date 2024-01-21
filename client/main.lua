@@ -447,7 +447,7 @@ end)
 
 --added for ps-housing
 RegisterNetEvent('qb-garages:client:removeHouseGarage', function(house)
-    Config.HouseGarages[house] = nil
+    Config.Garages[house] = nil
 end)
 
 -- Handlers
